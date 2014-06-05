@@ -1,6 +1,5 @@
 {
 	"name": "Dust Bunny",
-	"plural": "Dust Bunnies",
 	"size": "fine",
 	"hp": "1d4-1",
 	"damage": 1,
