@@ -2,7 +2,6 @@
 	"name": "Dust Bunny",
 	"size": "fine",
 	"hp": "1d4-1",
-	"damage": 1,
 	"spawn": "very common",
 	"biogenesis": true,
 	"materials": [
