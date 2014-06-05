@@ -3,7 +3,7 @@
 	"size": "fine",
 	"hp": "1d4-1",
 	"spawn": "very common",
-	"biogenesis": true,
+	"biogenesis": "common",
 	"materials": [
 		"dust",
 		"hair"
@@ -20,7 +20,7 @@
 			"sense": "sight",
 			"desc": "A thin trail of dust",
 			"material": "dust",
-			"dist": 2
+			"dist": "small"
 		}
 	],
 	"source": {
