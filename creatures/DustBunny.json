@@ -1,0 +1,56 @@
+{
+	"name": "Dust Bunny",
+	"plural": "Dust Bunnies",
+	"size": "fine",
+	"hp": "1d4-1",
+	"damage": 1,
+	"spawn": "very common",
+	"biogenesis": true,
+	"materials": [
+		"dust",
+		"hair"
+	],
+	"senses": {
+		"sight": "A $size clump of dust, hair, and other light debris",
+		"smell": "Daintly dusty",
+		"taste": "Disgusting",
+		"touch": "Soft and dusty",
+		"sound": "A nearly inaudible rustling"
+	},
+	"trail": [
+		{
+			"sense": "sight",
+			"desc": "A thin trail of dust",
+			"material": "dust",
+			"dist": 2
+		}
+	],
+	"source": {
+		"title": "Wikipedia",
+		"entry": "(idiomatic) A small clump of dust, fluff, hair, particles of skin, etc. that tends to accumulate indoors in areas that are not regularly dusted, such as under heavy furniture."
+	},
+	"variants": [
+		{
+			"name": "Dust Rabbit",
+			"spawn": "common",
+			"size": "small",
+			"hp": "1d8-1",
+			"damage": 1
+		},
+		{
+			"name": "Dust Bunny King",
+			"spawn": "unique",
+			"materials": [
+				"dust",
+				"hair",
+				"coffee grounds",
+				"gnarled hands"
+			],
+			"source": {
+				"title": "User Friendly",
+				"entry": "\"Why do I get the feeling that this is leading somewhere really bad?\" -- Smiling Man",
+				"url": "http://ars.userfriendly.org/cartoons/?id=19980224&mode=classic"
+			}
+		}
+	]
+}
