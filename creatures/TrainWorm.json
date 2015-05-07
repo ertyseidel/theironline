@@ -1,0 +1,30 @@
+{
+	"name": "Train Worm",
+	"size": "colossal (long)",
+	"hp": "100d10",
+	"spawn": "epic",
+	"materials": [
+		"worm tooth",
+		"worm flesh",
+		"nerve"
+	],
+	"senses": {
+		"sight": "A subway train... with teeth!",
+		"smell": "Rotting flesh",
+		"taste": "Rubbery, rotting flesh",
+		"touch": "Rubbery, warm",
+		"sound": "A subway train"
+	},
+	"trail": [
+		{
+			"sense": "sight",
+			"desc": "A slick of slime on the ground, nearly two meters wide.",
+			"material": "none",
+			"dist": "large"
+		}
+	],
+	"source": {
+		"title": "Self",
+		"entry": "Although one hears a train coming down the track, it's only when you see your reflection in the tooth of the train worm that you realise you're about to be dinner."
+	},
+}
