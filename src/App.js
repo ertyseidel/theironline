@@ -1,11 +1,8 @@
 ;(function(exports) {
-
-	var canvas = document.getElementById('canvas');
 	var settings = {
-		canvas: canvas,
-		color_background_fill: 'black'
+		canvas: "canvas"
 	};
 
-	var game = new Game(settings);
-	game.setState("state_start");
-});
+	//var game = new Game(settings);
+	game = new Game(settings);
+})();
