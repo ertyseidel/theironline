@@ -135,7 +135,8 @@
 					ctx.fillRect(this.pos.x, this.pos.y, this.size.x, this.size.y);
 					break;
 			}
-			ctx.fillStyle = "white";
+			//todo move this into an HUD obj
+			ctx.fillStyle = "black";
 			ctx.font = "20px monospace";
 			var info = "";
 			info += "HP: ";

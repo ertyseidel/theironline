@@ -83,25 +83,6 @@
 				ctx.fillStyle = "red";
 				ctx.fillRect(0, CANVAS_HEIGHT - ACTIVITY_BAR_HEIGHT, CANVAS_WIDTH * this.playerActionTimeout / MAX_ACTIVITY, ACTIVITY_BAR_HEIGHT);
 			}
-			//doesn't cast shadows!
-			//whyyyyyyy
-			if (this.activeSense == SENSE_SIGHT) {
-				for (var i = 0; i < CANVAS_WIDTH / GRID_X; i++){
-					for (var j = 0; j < CANVAS_HEIGHT / GRID_Y; j++){
-						var loc = {i : i, j : j};
-						var alpha = this.player.getSenseStrength(SENSE_SIGHT, loc);
-						alpha = this.coq.entities.all(LightSource).map(function(light) {
-							return light.getStrengthFor(loc);
-						}).reduce(function(a, b) {
-							return a * b;
-						}, alpha);
-
-						ctx.fillStyle = "rgba(255, 255, 255," + alpha + ")";
-						ctx.fillRect(i * GRID_X, j * GRID_Y, GRID_X, GRID_Y);
-
-					}
-				}
-			}
 		}
 	};
 
