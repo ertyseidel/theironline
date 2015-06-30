@@ -126,6 +126,7 @@
 		draw : function(ctx) {
 			switch(this.game.activeSense) {
 				case SENSE_SIGHT:
+				case SENSE_SMELL:
 					ctx.fillStyle = "blue";
 					ctx.fillRect(this.pos.x, this.pos.y, this.size.x, this.size.y);
 					break;
@@ -137,7 +138,7 @@
 			ctx.fillStyle = "white";
 			ctx.font = "20px monospace";
 			var info = "";
-			info += "HP: "
+			info += "HP: ";
 			ctx.fillText(info + this.health, 0, CANVAS_HEIGHT);
 		}
 	};

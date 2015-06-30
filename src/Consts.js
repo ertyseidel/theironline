@@ -17,3 +17,8 @@ const SENSE_SOUND = 5;
 
 const DEFAULT_SMELL_DISPERSAL = 0.005;
 const MAX_SMELL = 5;
+
+const WALL_NORMAL = 1;
+
+const WALL_COLORS = {};
+WALL_COLORS[WALL_NORMAL] = "white";

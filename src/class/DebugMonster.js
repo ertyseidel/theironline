@@ -103,7 +103,7 @@
 					return light.getStrengthFor(self.gpos);
 				}).reduce(function(a, b) {
 					return a + b;
-				});
+				}, 0);
 				alpha *= this.game.player.getSenseStrength(SENSE_SIGHT, this.gpos);
 				ctx.fillStyle = "rgba(255, 0, 0," + alpha + ")";
 				ctx.fillRect(this.pos.x, this.pos.y, this.size.x, this.size.y);
