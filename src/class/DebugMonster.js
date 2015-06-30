@@ -42,8 +42,13 @@
 			this.gpos.j += delta.j;
 		},
 		attack : function(other) {
-			console.log(this.name + " hits " + other.name);
-			other.takeDamage(1);
+			if (other.takeDamage) {
+				console.log(this.name + " hits " + other.name);
+				other.takeDamage(1);
+			}
+		},
+		isCollision : function(otherGpos) {
+			return this.gpos.i == otherGpos.i && this.gpos.j == otherGpos.j;
 		},
 		takeDamage : function(dmg) {
 			this.health -= dmg;
@@ -93,7 +98,14 @@
 		},
 		draw : function (ctx) {
 			if (this.game.activeSense === SENSE_SIGHT) {
-				ctx.fillStyle = "red";
+				var self = this;
+				var alpha = this.game.coq.entities.all(LightSource).map(function(light) {
+					return light.getStrengthFor(self.gpos);
+				}).reduce(function(a, b) {
+					return a + b;
+				});
+				alpha *= this.game.player.getSenseStrength(SENSE_SIGHT, this.gpos);
+				ctx.fillStyle = "rgba(255, 0, 0," + alpha + ")";
 				ctx.fillRect(this.pos.x, this.pos.y, this.size.x, this.size.y);
 			}
 		}

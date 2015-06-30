@@ -57,9 +57,12 @@
 			this.game.coq.entities.destroy(this);
 		},
 		attack : function(other) {
-			console.log(this.name + " hit " + other.name);
-			other.takeDamage(1);
-			return ATTACK_TIME;
+			if (other.takeDamage) {
+				console.log(this.name + " hit " + other.name);
+				other.takeDamage(1);
+				return ATTACK_TIME;
+			}
+			return 0;
 		},
 		takeDamage : function(dmg) {
 			this.health -= dmg;
@@ -70,6 +73,9 @@
 				return 0;
 			}
 			return ((this.senseStrengths[sense] - dist) / this.senseStrengths[sense]);
+		},
+		isCollision : function(otherGpos) {
+			return this.gpos.i == otherGpos.i && this.gpos.j == otherGpos.j;
 		},
 		update : function() {
 			//movement
